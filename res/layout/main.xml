@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+          
+           <TextView
+               android:id="@+id/textView1"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentTop="true"
+               android:layout_centerHorizontal="true"
+               android:layout_gravity="center_horizontal"
+               android:layout_marginBottom="5dp"
+               android:layout_marginLeft="5dp"
+               android:layout_marginRight="5dp"
+               android:layout_marginTop="5dp"
+               android:text="Easy Facebook Birthdays"
+               android:textAppearance="?android:attr/textAppearanceMedium"
+               android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button_step1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView1"
+                android:layout_margin="10dp"
+                android:drawableLeft="@android:drawable/ic_dialog_info"
+                android:text=" Read Step 1 First!" android:focusable="true"/>
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/button_step1"
+                android:layout_margin="5dp"
+                android:text="Facebook Birthdays Full Link"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/editText_birthdays_url"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView2"
+                android:layout_margin="10dp" android:text="webcal://www.facebook.com/ical/...">
+
+                <requestFocus />
+            </EditText>
+
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/editText_birthdays_url"
+                android:layout_margin="5dp"
+                android:text="for example: webcal://www.facebook.com/ical/b.php?uid=697359006&amp;key=AQB7yc1431sL8-Zan"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/checkBox_reminder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:text="reminder" android:checked="true"/>
+
+                <CheckBox
+                    android:id="@+id/checkBox_oneday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1 day adjustment" />
+
+            </LinearLayout>
+            
+                  <com.google.ads.AdView
+                android:id="@+id/adView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                ads:adSize="BANNER"
+                ads:adUnitId="a14eb1472fd13a8"
+                ads:loadAdOnCreate="true"
+                ads:testDevices="TEST_EMULATOR,e78b974e6ab65648b52951e69edcb571" >
+            </com.google.ads.AdView>
+                
+
+            <Button
+                android:id="@+id/button_process"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:drawableLeft="@android:drawable/stat_sys_download"
+                android:text="Process Facebook Birthdays" />
+
+            <Button
+                android:id="@+id/button_revert"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:drawableLeft="@android:drawable/presence_offline"
+                android:text="Undo Birthday Events" />
+        
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
